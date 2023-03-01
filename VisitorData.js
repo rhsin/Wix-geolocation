@@ -3,7 +3,7 @@ import { getSecret } from 'wix-secrets-backend';
 
 export async function fetchApiUrl () {
 	const apiKeyIPG =  await getSecret('apiKeyIPG');
-	return `https://api.ipgeolocation.io/ipgeo?apiKey=${apiKeyIPG}`;
+	return `https://api.ipgeolocation.io/ipgeo?apiKey=${apiKeyIPG}&include=security`;
 }
 
 // This needs to match the name of the collection in Wix Database.
